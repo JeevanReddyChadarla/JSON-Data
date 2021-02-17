@@ -1,4 +1,7 @@
-
+.App{
+  text-align: center;
+  margin: 10px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -20,7 +23,7 @@
   to { transform: rotate(360deg); }
 }
 .tick-icon{
-  font-size:14px;
+  font-size:20px;
   color: rgba(13, 148, 13);
 }
 .if-editing{
@@ -31,7 +34,7 @@
 
 }
 .edit-icon{
-  font-size: 14px;
+  font-size: 20px;
   color: rgb(255, 81, 0);
 }
 .inline-names{
