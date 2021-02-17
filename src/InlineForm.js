@@ -3,6 +3,7 @@ import {CheckOutlined } from '@ant-design/icons';
 import {Input} from 'antd';
 import './App.css'
 import { Row, Col } from 'antd';
+import { size } from "lodash";
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -33,11 +34,12 @@ export default class Form extends React.Component {
     return [
       header.map((y, k) => (
         
-        <div key={`trc-${k}`} >
+        <div key={`trc-${k}`} className="inline-names" >
           <Input
             name={y.prop}
             onChange={this.change}
             value={this.state.values[y.prop]}
+            style={{'font-size':'14px'}}
           />
         </div>
       )),

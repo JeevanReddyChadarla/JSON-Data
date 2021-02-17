@@ -20,17 +20,21 @@
   to { transform: rotate(360deg); }
 }
 .tick-icon{
-  font-size:30px;
+  font-size:14px;
   color: rgba(13, 148, 13);
 }
 .if-editing{
-  font-size: 20px;
+  font-size: 14px;
 }
 .not-editing{
-  font-size: 20px;
+  font-size: 14px;
 
 }
 .edit-icon{
-  font-size: 30px;
+  font-size: 14px;
   color: rgb(255, 81, 0);
+}
+.inline-names{
+  
+padding: 2px;
 }
