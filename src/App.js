@@ -97,7 +97,7 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-          
+          <div >
           <Edit
             handleSort={this.handleSort}
             handleRemove={this.handleRemove}
@@ -125,6 +125,7 @@ class App extends Component {
               }
             ]}
           />
+          </div>
         </div>
       </div>
     );

@@ -33,8 +33,8 @@ export default class Form extends React.Component {
     const { header} = this.props;
     return [
       header.map((y, k) => (
-        
-        <div key={`trc-${k}`} className="inline-names" >
+      
+        <div key={`trc-${k}`} className="inline-names card" >
           <Input
             name={y.prop}
             onChange={this.change}
