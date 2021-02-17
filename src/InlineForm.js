@@ -1,9 +1,8 @@
 import React from "react";
 import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
 import CheckIcon from "material-ui/svg-icons/navigation/check";
 import CancelIcon from "material-ui/svg-icons/navigation/cancel";
-import { TableRow, TableRowColumn } from "material-ui/Table";
+import {TableRowColumn } from "material-ui/Table";
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -32,45 +31,13 @@ export default class Form extends React.Component {
     }));
   };
 
-  validate = () => {
-    let isError = false;
-    const errors = {
-      firstName: "",
-      lastName: "",
-      username: "",
-      email: "",
-      password: ""
-    };
-
-    const { username, email } = this.state.values;
-
-    if (username.length < 5) {
-      isError = true;
-      errors.username = "Username needs to be atleast 5 characters long";
-    }
-
-    if (email.indexOf("@") === -1) {
-      isError = true;
-      errors.email = "Requires valid email";
-    }
-
-    this.setState({
-      errors
-    });
-
-    return isError;
-  };
-
   onSubmit = e => {
     e.preventDefault();
-    const err = this.validate();
-    if (!err) {
       this.props.handleSave(this.props.i, this.state.values);
-    }
   };
 
   render() {
-    const { header, x, i } = this.props;
+    const { header} = this.props;
     return [
       header.map((y, k) => (
         <TableRowColumn key={`trc-${k}`}>

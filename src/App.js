@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import orderBy from "lodash/orderBy";
 import "./App.css";
-
 import Table from "./Table.js";
 
 
@@ -111,13 +109,9 @@ class App extends Component {
             editIdx={this.state.editIdx}
             stopEditing={this.stopEditing}
             handleSave={this.handleSave}
-            columnToSort={this.state.columnToSort}
-            sortDirection={this.state.sortDirection}
-            data={orderBy(
-              this.state.data,
-              this.state.columnToSort,
-              this.state.sortDirection
-            )}
+            
+            data={this.state.data}
+            
             header={[
               {
                 name: "First name",
