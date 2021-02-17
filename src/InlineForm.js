@@ -2,8 +2,6 @@ import React from "react";
 import {CheckOutlined } from '@ant-design/icons';
 import {Input} from 'antd';
 import './App.css'
-import { Row, Col } from 'antd';
-import { size } from "lodash";
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +25,7 @@ export default class Form extends React.Component {
   onSubmit = e => {
     e.preventDefault();
       this.props.handleSave(this.props.i, this.state.values);
+      console.log(this.state.values)
   };
 
   render() {
