@@ -1,9 +1,5 @@
 import React from "react";
 import {
-  Table,
-  TableBody,
-  TableHeader,
-
   TableRow,
   TableRowColumn
 } from "material-ui/Table";
