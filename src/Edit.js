@@ -12,7 +12,8 @@ const row = (
 ) => {
   const currentlyEditing = editIdx === i;
   return currentlyEditing ? (
-    <div key={`inline-form-${i}`} selectable={false}>
+    <div key={`inline-form-${i}`} selectable={false} className="if-editing">
+      
       <InlineForm
         handleSave={handleSave}
         header={header}
@@ -21,13 +22,15 @@ const row = (
       />
     </div>
   ) : (
-    <div key={`tr-${i}`} selectable={false}>
+    
+    <div key={`tr-${i}`} selectable={false} className="not-editing">
       {header.map((y, k) => (
+        
         <div key={`trc-${k}`}>{x[y.prop]}</div>
       ))}
-      <div>
-        
+      <div className="edit-icon">
         <EditFilled onClick={() => startEditing(i)}/>
+        <hr></hr>
       </div>
     </div>
   );
@@ -36,7 +39,6 @@ const row = (
 export default ({
   data,
   header,
- 
   startEditing,
   editIdx,
   handleSave,

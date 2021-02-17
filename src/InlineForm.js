@@ -1,6 +1,8 @@
 import React from "react";
 import {CheckOutlined } from '@ant-design/icons';
 import {Input} from 'antd';
+import './App.css'
+import { Row, Col } from 'antd';
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +32,8 @@ export default class Form extends React.Component {
     const { header} = this.props;
     return [
       header.map((y, k) => (
-        <div key={`trc-${k}`}>
+        
+        <div key={`trc-${k}`} >
           <Input
             name={y.prop}
             onChange={this.change}
@@ -38,8 +41,9 @@ export default class Form extends React.Component {
           />
         </div>
       )),
-      <div key="icon-row-column">
+      <div key="icon-row-column" className="tick-icon">
         <CheckOutlined onClick={this.onSubmit} />
+        <hr></hr>
       </div>
     ];
   }

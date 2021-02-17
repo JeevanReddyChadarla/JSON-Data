@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Edit from "./Edit.js";
 
-
 class App extends Component {
   state = {
     data: [
@@ -93,8 +92,6 @@ class App extends Component {
     }));
     this.stopEditing();
   };
-
-
 
   render() {
     return (
