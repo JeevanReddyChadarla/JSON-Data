@@ -1,17 +1,10 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import injectTapEventPlugin from "react-tap-event-plugin";
 import orderBy from "lodash/orderBy";
 import "./App.css";
 
 import Table from "./Table.js";
 
-
-
-const invertDirection = {
-  asc: "desc",
-  desc: "asc"
-};
 
 class App extends Component {
   state = {
@@ -88,16 +81,7 @@ class App extends Component {
       }
     ],
     editIdx: -1,
-    columnToSort: "",
-    sortDirection: "desc"
   };
-
-  handleRemove = i => {
-    this.setState(state => ({
-      data: state.data.filter((row, j) => j !== i)
-    }));
-  };
-
   startEditing = i => {
     this.setState({ editIdx: i });
   };
@@ -113,15 +97,7 @@ class App extends Component {
     this.stopEditing();
   };
 
-  handleSort = columnName => {
-    this.setState(state => ({
-      columnToSort: columnName,
-      sortDirection:
-        state.columnToSort === columnName
-          ? invertDirection[state.sortDirection]
-          : "asc"
-    }));
-  };
+
 
   render() {
     return (
