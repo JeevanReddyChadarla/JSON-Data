@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "material-ui/TextField";
-import EditOutlined from "@ant-design/icons";
+import CheckIcon from "material-ui/svg-icons/navigation/check";
+import {CheckOutlined } from '@ant-design/icons';
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -39,7 +40,7 @@ export default class Form extends React.Component {
         </div>
       )),
       <div key="icon-row-column">
-        <EditOutlined onClick={this.onSubmit} />
+        <CheckOutlined onClick={this.onSubmit} />
       </div>
     ];
   }

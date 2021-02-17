@@ -1,5 +1,5 @@
 import React from "react";
-import EditIcon from "material-ui/svg-icons/image/edit";
+import {EditFilled} from '@ant-design/icons';
 import InlineForm from "./InlineForm";
 
 const row = (
@@ -26,8 +26,8 @@ const row = (
         <div key={`trc-${k}`}>{x[y.prop]}</div>
       ))}
       <div>
-        <EditIcon onClick={() => startEditing(i)} />
         
+        <EditFilled onClick={() => startEditing(i)}/>
       </div>
     </div>
   );
