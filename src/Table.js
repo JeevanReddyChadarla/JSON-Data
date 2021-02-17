@@ -1,8 +1,4 @@
 import React from "react";
-import {
-  TableRow,
-  TableRowColumn
-} from "material-ui/Table";
 import EditIcon from "material-ui/svg-icons/image/edit";
 
 import InlineForm from "./InlineForm";
@@ -11,7 +7,6 @@ const row = (
   x,
   i,
   header,
-
   startEditing,
   editIdx,
   handleSave,
@@ -19,7 +14,7 @@ const row = (
 ) => {
   const currentlyEditing = editIdx === i;
   return currentlyEditing ? (
-    <TableRow key={`inline-form-${i}`} selectable={false}>
+    <div key={`inline-form-${i}`} selectable={false}>
       <InlineForm
         handleSave={handleSave}
         header={header}
@@ -27,17 +22,17 @@ const row = (
         i={i}
         stopEditing={stopEditing}
       />
-    </TableRow>
+    </div>
   ) : (
-    <TableRow key={`tr-${i}`} selectable={false}>
+    <div key={`tr-${i}`} selectable={false}>
       {header.map((y, k) => (
-        <TableRowColumn key={`trc-${k}`}>{x[y.prop]}</TableRowColumn>
+        <div key={`trc-${k}`}>{x[y.prop]}</div>
       ))}
-      <TableRowColumn>
+      <div>
         <EditIcon onClick={() => startEditing(i)} />
         
-      </TableRowColumn>
-    </TableRow>
+      </div>
+    </div>
   );
 };
 
