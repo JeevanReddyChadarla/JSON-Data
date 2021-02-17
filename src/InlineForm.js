@@ -51,7 +51,6 @@ export default class Form extends React.Component {
       )),
       <TableRowColumn key="icon-row-column">
         <CheckIcon onClick={this.onSubmit} />
-        <CancelIcon onClick={this.props.stopEditing} />
       </TableRowColumn>
     ];
   }

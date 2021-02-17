@@ -1,6 +1,5 @@
 import React from "react";
 import EditIcon from "material-ui/svg-icons/image/edit";
-
 import InlineForm from "./InlineForm";
 
 const row = (
