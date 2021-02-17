@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./App.css";
-import Table from "./Table.js";
+import Edit from "./Edit.js";
 
 
 class App extends Component {
@@ -102,16 +102,14 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           
-          <Table
+          <Edit
             handleSort={this.handleSort}
             handleRemove={this.handleRemove}
             startEditing={this.startEditing}
             editIdx={this.state.editIdx}
             stopEditing={this.stopEditing}
             handleSave={this.handleSave}
-            
             data={this.state.data}
-            
             header={[
               {
                 name: "First name",

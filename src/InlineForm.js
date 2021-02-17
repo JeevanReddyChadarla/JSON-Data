@@ -1,22 +1,12 @@
 import React from "react";
 import TextField from "material-ui/TextField";
 import CheckIcon from "material-ui/svg-icons/navigation/check";
-import CancelIcon from "material-ui/svg-icons/navigation/cancel";
-import {TableRowColumn } from "material-ui/Table";
-
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       values: {
         ...props.x
-      },
-      errors: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        username: ""
       }
     };
   }
@@ -40,18 +30,17 @@ export default class Form extends React.Component {
     const { header} = this.props;
     return [
       header.map((y, k) => (
-        <TableRowColumn key={`trc-${k}`}>
+        <div key={`trc-${k}`}>
           <TextField
             name={y.prop}
             onChange={this.change}
             value={this.state.values[y.prop]}
-            errorText={this.state.errors[y.prop]}
           />
-        </TableRowColumn>
+        </div>
       )),
-      <TableRowColumn key="icon-row-column">
+      <div key="icon-row-column">
         <CheckIcon onClick={this.onSubmit} />
-      </TableRowColumn>
+      </div>
     ];
   }
 }

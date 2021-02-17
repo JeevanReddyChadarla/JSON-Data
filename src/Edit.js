@@ -9,7 +9,6 @@ const row = (
   startEditing,
   editIdx,
   handleSave,
-  stopEditing
 ) => {
   const currentlyEditing = editIdx === i;
   return currentlyEditing ? (
@@ -19,7 +18,6 @@ const row = (
         header={header}
         x={x}
         i={i}
-        stopEditing={stopEditing}
       />
     </div>
   ) : (
