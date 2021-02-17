@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./App.css";
 import Edit from "./Edit.js";
 
@@ -99,7 +98,7 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
+      <div>
         <div className="App">
           
           <Edit
@@ -130,7 +129,7 @@ class App extends Component {
             ]}
           />
         </div>
-      </MuiThemeProvider>
+      </div>
     );
   }
 }

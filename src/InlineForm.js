@@ -1,7 +1,6 @@
 import React from "react";
-import TextField from "material-ui/TextField";
-import CheckIcon from "material-ui/svg-icons/navigation/check";
 import {CheckOutlined } from '@ant-design/icons';
+import {Input} from 'antd';
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +31,7 @@ export default class Form extends React.Component {
     return [
       header.map((y, k) => (
         <div key={`trc-${k}`}>
-          <TextField
+          <Input
             name={y.prop}
             onChange={this.change}
             value={this.state.values[y.prop]}
